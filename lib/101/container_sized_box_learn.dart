@@ -19,22 +19,41 @@ class ContainerSizedBoxLearn extends StatelessWidget {
             ),
             Container(
               height: 50,
-              constraints: const BoxConstraints(maxHeight: 100, maxWidth: 150, minWidth: 100),
+              constraints: const BoxConstraints(
+                  maxHeight: 100, maxWidth: 150, minWidth: 100),
               child: Text('a' * 1),
               padding: const EdgeInsets.all(10),
               margin: const EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                gradient: LinearGradient(colors: [Colors.red,Colors.black]),
-                boxShadow: const[BoxShadow(color: Colors.green,offset: Offset(0.1, 1),blurStyle: BlurStyle.normal)],
-                border: Border.all(width: 10,color: Colors.white12)
-              ),
+              decoration: ProjectUtility.boxDecoration,
             )
           ],
         ));
   }
-
 }
-class ProjectContainerDecoration{
-  
+
+class ProjectUtility {
+  static BoxDecoration boxDecoration = BoxDecoration(
+      borderRadius: BorderRadius.circular(10),
+      gradient: LinearGradient(colors: [Colors.red, Colors.black]),
+      boxShadow: const [
+        BoxShadow(
+            color: Colors.green,
+            offset: Offset(0.1, 1),
+            blurStyle: BlurStyle.normal)
+      ],
+      border: Border.all(width: 10, color: Colors.white12));
+}
+
+class ProjectContainerDecoration extends BoxDecoration {
+  ProjectContainerDecoration()
+      : super(
+            borderRadius: BorderRadius.circular(10),
+            gradient: LinearGradient(colors: [Colors.red, Colors.black]),
+            boxShadow: const [
+              BoxShadow(
+                  color: Colors.green,
+                  offset: Offset(0.1, 1),
+                  blurStyle: BlurStyle.normal)
+            ],
+            border: Border.all(width: 10, color: Colors.white12));
 }
