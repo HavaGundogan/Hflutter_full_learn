@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_full_learn/101/container_sized_box_learn.dart';
 import 'package:flutter_full_learn/101/text_learn.dart';
 
 void main() {
-  runApp(const MyApp());       //ali dayı
+  runApp(const MyApp()); //ali dayı
 }
 
 class MyApp extends StatelessWidget {
@@ -12,12 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',     //evimin adı
-      theme: ThemeData(         //renkleri belirler
-      
+      title: 'Flutter Demo', //evimin adı
+      theme: ThemeData(
+        //renkleri belirler
+
         primarySwatch: Colors.red,
       ),
-      home: const TextLearnView(),  //evin çocuğu
+      home: ContainerSizedBoxLearn(), //evin çocuğu
     );
   }
 }
